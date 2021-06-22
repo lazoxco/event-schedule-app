@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Keynote(props) {
+function KeynoteDetails(props) {
   const id = props.mathc.params.id
   console.log(props)
   console.log(id)
@@ -9,4 +9,4 @@ function Keynote(props) {
   )
 }
 
-export default Keynote
+export default KeynoteDetails
