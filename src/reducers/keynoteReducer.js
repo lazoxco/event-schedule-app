@@ -5,7 +5,7 @@ const initState = {
       "title": "What is Ruby?",
       "speaker": "Captain America",
       "description": "Learn OO Ruby",
-      "date_time": "06/12/2022 1:00 {M"
+      "date_time": "06/12/2022 1:00 PM"
     },
     {
       "id": "2",

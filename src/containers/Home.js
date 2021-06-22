@@ -4,7 +4,6 @@ import { connect } from 'react-redux'
 
 class Home extends Component {
   render(){
-    // console.log(this.props.keynotes)
     return(
       <div className="home">
         <HeroImage />
