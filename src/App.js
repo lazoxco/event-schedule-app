@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './containers/Navbar'
+import Footer from './containers/Footer'
 import Home from './containers/Home'
 import Schedule from './containers/Schedule'
 import CreateKeynote from './components/CreateKeynote'
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/create" component={CreateKeynote}/>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

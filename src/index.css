@@ -32,3 +32,9 @@ h1 {
   margin: 20px 0;
   padding: 10px 20px;
 }
+
+.footer {
+  padding: 2% 0;
+  color: #F9F9F9;
+  background-color: #131313;
+}
