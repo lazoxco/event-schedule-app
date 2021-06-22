@@ -11,7 +11,7 @@ class Home extends Component {
         <div className="container">
           <div className="row intro">
             <div className="col">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Lu3qzZ1Ck9g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Lu3qzZ1Ck9g" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             <div className="col">
               <h1>Eat. Sleep. Code. Repeat.</h1>
