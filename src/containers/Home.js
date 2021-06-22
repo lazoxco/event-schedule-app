@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Jumbotron from '../components/Jumbotron'
+import HeroImage from '../components/HeroImage'
 import { connect } from 'react-redux'
 
 class Home extends Component {
@@ -7,7 +7,7 @@ class Home extends Component {
     // console.log(this.props.keynotes)
     return(
       <div className="home">
-        <Jumbotron />
+        <HeroImage />
         <div className="container">
           <h1>Home</h1>
         </div>
