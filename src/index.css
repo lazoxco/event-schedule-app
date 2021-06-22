@@ -23,3 +23,8 @@ code {
 h1 {
   margin: 20px 0;
 }
+
+.card {
+  margin: 20px 0;
+  padding: 10px 20px;
+}
