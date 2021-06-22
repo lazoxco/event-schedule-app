@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Jumbotron from '../components/Jumbotron'
+import { connect } from 'react-redux'
 
 class Home extends Component {
   render(){
+    // console.log(this.props.keynotes)
     return(
       <div className="home">
         <Jumbotron />
@@ -13,5 +15,10 @@ class Home extends Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    keynotes: state.keynotes
+  }
+}
 
-export default Home
+export default connect(mapStateToProps)(Home)
