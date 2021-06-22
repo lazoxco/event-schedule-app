@@ -13,9 +13,10 @@ code {
 }
 
 .jumbotron {
+  color: #F9F9F9;
   background-color: lightskyblue;
   padding: 10% 0;
-  /* background-image: url("paper.gif"); */
+  background-image: url("./luca-bravo-TaCk3NspYe0-unsplash.jpg");
 }
 
 h1 {
