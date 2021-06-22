@@ -1,20 +1,20 @@
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
     <div className="container">
-      <a className="navbar-brand" href="/">DevCon</a>
+      <Link to="/" className="navbar-brand">DevCon</Link>
       
       <ul className="navbar-nav">
         <li className="nav-item active">
-          <a className="nav-link" href="/">Home</a>
+          <Link to="/" className="nav-link">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/schedule">Schedule</a>
+          <Link to="/schedule" className="nav-link">Schedule</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/create">New Keynote</a>
+          <Link to="/create" className="nav-link">New Keynote</Link>
         </li>
       </ul>
     </div>
