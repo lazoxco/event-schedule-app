@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.jumbotron {
+  background-color: lightskyblue;
+  padding: 10% 0;
+  /* background-image: url("paper.gif"); */
+}
+
+h1 {
+  margin: 20px 0;
+}

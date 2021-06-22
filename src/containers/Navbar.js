@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="container">
-      <a className="navbar-brand" href="/">PR 2021</a>
+      <a className="navbar-brand" href="/">WWDC2022</a>
       
       <ul className="navbar-nav">
         <li className="nav-item active">
