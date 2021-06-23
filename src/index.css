@@ -24,7 +24,7 @@ code {
   background-position: bottom;
 }
 
-h1 {
+h1, h3 {
   margin: 20px 0;
 }
 
@@ -40,4 +40,13 @@ h1 {
   left: 0;
   bottom: 0;
   width: 100%; */
+}
+
+.input-group {
+  margin: 20px 0;
+}
+
+.keynote-form {
+  width: 60%;
+  margin: 0 auto;
 }

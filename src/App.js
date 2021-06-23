@@ -4,6 +4,7 @@ import Footer from './containers/Footer'
 import Home from './containers/Home'
 import Schedule from './containers/Schedule'
 import CreateKeynote from './components/CreateKeynote'
+import KeynoteDetails from './components/KeynoteDetails'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/create" component={CreateKeynote}/>
+          <Route exact path="/keynote/:id" component={KeynoteDetails}/>
         </Switch>
         <Footer />
       </div>

@@ -1,11 +1,15 @@
 import React from 'react'
 
-function KeynoteDetails(props) {
-  const id = props.mathc.params.id
+const KeynoteDetails = (props) => {
   console.log(props)
-  console.log(id)
+  const id = props.match.params.id
   return (
-    <div>individual keynote details</div>
+    <div>
+      <h3>Keynote Title for { id }</h3>
+      <p>Keynote Speaker</p>
+      <p>Keynote Time</p>
+      <p>Keynote Description</p>
+    </div>
   )
 }
 
