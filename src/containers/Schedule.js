@@ -1,11 +1,16 @@
 import React, { Component } from 'react'
 import KeynoteList from '../components/KeynoteList'
 import { connect } from 'react-redux'
+import { fetchKeynotes } from '../actions/keynoteActions'
 
 class Schedule extends Component {
+  
+  componentDidMount() {
+    this.props.fetchKeynotes()
+  }
+
   render() {
     const { keynotes } = this.props
-    
     return (
       <div className="container">
         <KeynoteList keynotes={keynotes}/>
@@ -20,4 +25,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Schedule)
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchKeynotes: () => dispatch(fetchKeynotes())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Schedule)

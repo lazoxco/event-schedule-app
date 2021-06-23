@@ -5,10 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import keynoteReducer from './reducers/keynoteReducer'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-// import thunk from 'redux-thunk'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
-const store = createStore(keynoteReducer)
+const store = createStore(keynoteReducer, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

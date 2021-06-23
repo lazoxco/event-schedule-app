@@ -1,7 +1,6 @@
 import React from 'react'
 
 const KeynoteDetails = (props) => {
-  console.log(props)
   const id = props.match.params.id
   return (
     <div className="container">

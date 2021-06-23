@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const KeynoteSummary = ({ keynote }) => {
   return (
-    <div className="card">
+    <div className="card">      
       <div className="card-body">
         <h2 className="card-title">Topic: { keynote.title }</h2>
         <p className="card-text">Presenter: { keynote.speaker }</p> 

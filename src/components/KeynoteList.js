@@ -1,6 +1,6 @@
 import KeynoteSummary from './KeynoteSummary'
 
-const KeynoteList = ({ keynotes }) => {
+const KeynoteList = ({keynotes}) => {
   return (
     <div>
       { keynotes && keynotes.map(keynote => {
@@ -8,6 +8,7 @@ const KeynoteList = ({ keynotes }) => {
           <KeynoteSummary keynote={keynote} key={keynote.id}/>
         )
       })}
+
     </div>
   )
 }

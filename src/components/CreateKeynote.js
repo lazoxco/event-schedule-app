@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-
+import { createKeynote } from '../actions/keynoteActions'
+import { connect } from 'react-redux'
 
 class CreateKeynote extends Component {
   state = {
@@ -18,7 +19,8 @@ class CreateKeynote extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state)
+    // console.log(this.state)
+    this.props.createKeynote(this.state)
   }
 
   render() {
@@ -51,4 +53,10 @@ class CreateKeynote extends Component {
   }
 }
 
-export default CreateKeynote
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createKeynote: (keynote) => dispatch(createKeynote(keynote))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateKeynote)
