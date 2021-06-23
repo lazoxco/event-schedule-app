@@ -10,25 +10,36 @@ class CreateKeynote extends Component {
 
   }
 
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(this.state)
+  }
+
   render() {
     return (
       <div className="container">
-        <form className="keynote-form">
+        <form onSubmit={this.handleSubmit} className="keynote-form">
           <h3>Create a Keynote</h3>
           <div className="input-group">
-            <input className="form-control" placeholder="Title" type="text" id="title" />
+            <input onChange={this.handleChange} className="form-control" placeholder="Title" type="text" id="title" />
           </div>
 
           <div className="input-group">
-            <input className="form-control" placeholder="Speaker" type="text" id="speaker" />
+            <input onChange={this.handleChange} className="form-control" placeholder="Speaker" type="text" id="speaker" />
           </div>
 
           <div className="input-group">
-            <textarea className="form-control" placeholder="Description" type="text" id="description"></textarea>
+            <textarea onChange={this.handleChange} className="form-control" placeholder="Description" type="text" id="description"></textarea>
           </div>
 
           <div className="input-group">
-            <input className="form-control" placeholder="Date and Time" type="text" id="date_time" />
+            <input onChange={this.handleChange} className="form-control" placeholder="Date and Time" type="text" id="date_time" />
           </div>
 
           <div className="input-group">
