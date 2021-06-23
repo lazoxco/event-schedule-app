@@ -1,10 +1,11 @@
 import React from 'react'
 
+import { connect } from 'react-redux'
+
 const KeynoteDetails = (props) => {
-  const id = props.match.params.id
   return (
     <div className="container">
-      <h3>Keynote Title for { id }</h3>
+      <h3>Keynote Title</h3>
       <p>Keynote Speaker</p>
       <p>Keynote Time</p>
       <p>Keynote Description</p>
@@ -12,4 +13,11 @@ const KeynoteDetails = (props) => {
   )
 }
 
-export default KeynoteDetails
+const mapStateToProps = (state, ownProps) => {
+  let id = ownProps.match.params.id
+  return {
+    keynote: state.keynotes.find(keynote => keynote.id === id)
+  }
+}
+
+export default connect(mapStateToProps)(KeynoteDetails)

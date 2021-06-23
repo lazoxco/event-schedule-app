@@ -1,13 +1,11 @@
 const keynoteReducer = (state = {keynotes: [], loading: false}, action) => {
   switch(action.type) {
-    case "GOT_KEYNOTES":
+    case "KEYNOTES_RECEIVED":
       return {keynotes: action.payload}
     case "LOADING":
       return {...state, loading:true}
     case 'CREATE_KEYNOTE':
-      console.log("created keynote")
-      console.log(action.keynote)
-      break;
+      return {...state, keynotes: action.payload}
     default:
       return state
   }

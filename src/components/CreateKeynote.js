@@ -19,8 +19,14 @@ class CreateKeynote extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    // console.log(this.state)
     this.props.createKeynote(this.state)
+    this.setState({
+      title: '',
+      speaker: '',
+      description: '',
+      dateTime: ''
+  
+    })
   }
 
   render() {
