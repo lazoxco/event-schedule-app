@@ -35,10 +35,9 @@ h1 {
 
 .footer {
   padding: 2% 0;
-  color: #F9F9F9;
-  background-color: #131313;
-  position: fixed;
+  color: #131313;
+  /* position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
 }
