@@ -11,6 +11,7 @@ export const setKeynotes = (keynotes) => ({type: "GOT_KEYNOTES", payload: keynot
 
 export const fetchKeynotes =  () => {
   return(dispatch) => {
+    dispatch({type: "LOADING"})
     fetch(url)
     .then(resp => resp.json())
     .then(data => {
