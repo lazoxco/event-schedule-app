@@ -4,7 +4,7 @@ const KeynoteDetails = (props) => {
   console.log(props)
   const id = props.match.params.id
   return (
-    <div>
+    <div className="container">
       <h3>Keynote Title for { id }</h3>
       <p>Keynote Speaker</p>
       <p>Keynote Time</p>

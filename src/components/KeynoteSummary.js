@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 const KeynoteSummary = ({ keynote }) => {
   return (
@@ -6,7 +7,7 @@ const KeynoteSummary = ({ keynote }) => {
         <h2 className="card-title">Topic: { keynote.title }</h2>
         <p className="card-text">Presenter: { keynote.speaker }</p> 
         <p className="card-text">Time: { keynote.date_time }</p>
-        <a href="/" className="btn btn-primary">Learn More</a>
+        <Link to={"/keynote/" + keynote.id } className="btn btn-primary">More Details</Link>
       </div>
     </div>
   )
