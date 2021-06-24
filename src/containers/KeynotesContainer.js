@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
 import Keynotes from '../components/Keynotes'
 import CreateKeynote from './CreateKeynote'
 
 
 class KeynotesContainer extends Component {
   render() {
+    console.log(this.props)
     return (
     <Switch>
-      <Route exact path="/keynotes">
+      <Route exact path="/keynotes" >
         <Keynotes />
       </Route>
       <Route exact path="/keynotes/new">
@@ -19,4 +21,10 @@ class KeynotesContainer extends Component {
   }
 }
 
-export default KeynotesContainer
+const mapStateToProps = (state) => {
+  return {
+    keynotes: state.keynotes
+  }
+}
+
+export default connect(mapStateToProps)(KeynotesContainer)

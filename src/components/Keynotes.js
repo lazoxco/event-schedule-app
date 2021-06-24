@@ -1,10 +1,10 @@
 import React from 'react'
-import KeynoteList from './KeynoteList'
+// import { BrowserRouter as Link } from 'react-router-dom'
 
 export default function Keynotes() {
   return (
     <div>
-      <KeynoteList />
+      Display keynotes
     </div>
   )
 }
