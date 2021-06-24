@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import HeroImage from '../components/HeroImage'
-import { connect } from 'react-redux'
 import Schedule from './Schedule'
 
 class Home extends Component {
@@ -29,10 +28,5 @@ class Home extends Component {
     )
   }
 }
-const mapStateToProps = (state) => {
-  return {
-    keynotes: state.keynotes
-  }
-}
 
-export default connect(mapStateToProps)(Home)
+export default Home

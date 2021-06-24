@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/create" component={CreateKeynote}/>
-          <Route exact path="/keynote/:id" component={KeynoteDetails}/>
+          <Route exact path="/keynotes/:id" component={(routeInfo) => <KeynoteDetails routeData={routeInfo} />}/>
         </Switch>
         <Footer />
       </div>
