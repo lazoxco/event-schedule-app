@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Navbar from './containers/Navbar'
+import Navbar from './components/Navbar'
 import Home from './containers/Home'
 import KeynotesContainer from './containers/KeynotesContainer'
 import { connect } from 'react-redux';
