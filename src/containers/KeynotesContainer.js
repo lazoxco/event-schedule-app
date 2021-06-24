@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Route, Switch } from 'react-router-dom'
 import Keynotes from '../components/Keynotes'
-import CreateKeynote from '../components/CreateKeynote'
+import CreateKeynote from './CreateKeynote'
 
 
 class KeynotesContainer extends Component {
   render() {
     return (
     <Switch>
-      <Route path="/keynotes">
+      <Route exact path="/keynotes">
         <Keynotes />
       </Route>
-      <Route path="/keynotes/new">
+      <Route exact path="/keynotes/new">
         <CreateKeynote />
       </Route>
     </Switch>
