@@ -1,10 +1,10 @@
 import React from 'react'
-import Schedule from '../containers/Schedule'
+import KeynoteList from './KeynoteList'
 
 export default function Keynotes() {
   return (
     <div>
-      <Schedule />
+      <KeynoteList />
     </div>
   )
 }

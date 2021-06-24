@@ -4,10 +4,6 @@ import { connect } from 'react-redux'
 import { fetchKeynotes } from '../actions/keynoteActions'
 
 class Schedule extends Component {
-  
-  componentDidMount() {
-    this.props.fetchKeynotes()
-  }
 
   render() {
     const { keynotes } = this.props
