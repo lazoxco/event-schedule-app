@@ -1,15 +1,9 @@
 import React, { Component } from 'react'
-import { fetchKeynote } from '../actions/keynoteActions'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 
 class KeynoteDetails extends Component {
 
-  // componentDidMount() {
-  //   this.props.fetchKeynote(this.props.match.params.id)
-  // }
-
   render() {
-    console.log(this.props)
     return (
       <div className="container">
         <h3>Keynote Title</h3>

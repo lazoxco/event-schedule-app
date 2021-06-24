@@ -15,7 +15,12 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/create" component={CreateKeynote}/>
-          <Route exact path="/keynotes/:id" component={(routeInfo) => <KeynoteDetails routeData={routeInfo} />}/>
+          <Route exact path="/keynotes/:id" component={(routeData) => {
+            console.log(routeData)
+            const id = parseInt(routeData.match.params.id)
+            const keynote = this.props.keynotes.find(i => i.id === id)
+            return <KeynoteDetails />
+          }}/>
         </Switch>
         <Footer />
       </div>
