@@ -3,19 +3,20 @@ import { BrowserRouter as Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Keynotes from '../components/Keynotes'
 import CreateKeynote from './CreateKeynote'
+// import KeynoteDetails from '../components/KeynoteDetails'
 
 
 class KeynotesContainer extends Component {
   render() {
-    console.log(this.props)
-    return (
+   return (
     <Switch>
       <Route exact path="/keynotes" >
-        <Keynotes />
+        <Keynotes keynotes={this.props.keynotes}/>
       </Route>
       <Route exact path="/keynotes/new">
         <CreateKeynote />
       </Route>
+      <Route path="/keynotes/:id" render={() => <div>show</div>}/>
     </Switch>
     )
   }
