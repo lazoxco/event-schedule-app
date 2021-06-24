@@ -3,8 +3,8 @@ import Navbar from './containers/Navbar'
 import Footer from './containers/Footer'
 import Home from './containers/Home'
 import Schedule from './containers/Schedule'
-import CreateKeynote from './components/CreateKeynote'
-import KeynoteDetails from './components/KeynoteDetails'
+import KeynotesContainer from './containers/KeynotesContainer'
+import { connect } from 'react-redux';
 
 function App() {
   return (
@@ -14,13 +14,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/schedule" component={Schedule}/>
-          <Route exact path="/create" component={CreateKeynote}/>
-          <Route exact path="/keynotes/:id" component={(routeData) => {
-            console.log(routeData)
-            const id = parseInt(routeData.match.params.id)
-            const keynote = this.props.keynotes.find(i => i.id === id)
-            return <KeynoteDetails />
-          }}/>
+          <Route path="/keynotes" component={(routeInfo) => <KeynotesContainer routeData={routeInfo} />}/>
+          <Route path="*" render={() => <h1 className="text-center">404 | Page Not Found</h1>}/>
         </Switch>
         <Footer />
       </div>
@@ -28,4 +23,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    keynotes: state.keynotes
+  }
+}
+
+export default connect(mapStateToProps)(App)

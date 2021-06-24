@@ -14,7 +14,7 @@ const Navbar = () => {
           <Link to="/schedule" className="nav-link">Schedule</Link>
         </li>
         <li className="nav-item">
-          <Link to="/create" className="nav-link">New Keynote</Link>
+          <Link to="/keynotes/new" className="nav-link">New Keynote</Link>
         </li>
       </ul>
     </div>
